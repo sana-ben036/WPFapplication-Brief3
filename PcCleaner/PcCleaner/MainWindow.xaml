@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PcCleaner"
         mc:Ignorable="d"
-        Title="PC-Cleaner" Height="450" Width="800">
-    <Grid>
-        
+        Title="PC_Cleaner" Height="500" Width="800" ButtonBase.Click="btn_Click">
+    <Grid >
+        <Rectangle Name="Bloc_1"  HorizontalAlignment="Left" Height="120" Margin="202,0,0,0"  VerticalAlignment="Top" Width="598" OpacityMask="#FF1592DF" Fill="#FF3EA4E2"/>
+        <Rectangle Name="Bloc_2" HorizontalAlignment="Left" Height="484" VerticalAlignment="Center" Width="202" OpacityMask="#FF1592DF" Fill="#FF3EA4E2"/>
+        <Button Name="btn"  Content="&#xA;&#xA;&#xD;&#xA;NETTOYER" HorizontalAlignment="Left" Margin="237,182,0,0" VerticalAlignment="Top" Height="126" Width="149" Click="btn_Click_1" BorderBrush="#FF19B7CE"  Background="#FF19B7CE" Foreground="#FFF6EEEE" FontFamily="Akhbar MT" FontSize="14" FontWeight="Bold" />
+        <Rectangle x:Name="Bloc_1_Copy"  HorizontalAlignment="Left" Height="120" Margin="202,363,0,0"  VerticalAlignment="Top" Width="598" OpacityMask="#FF2A7CAE" Fill="#FFD9E7E6"/>
+        <Button x:Name="btn_Copy"  Content="&#xA;&#xA;&#xA;HISTORIQUE" HorizontalAlignment="Left" Margin="410,182,0,0" VerticalAlignment="Top" Height="126" Width="150" Click="btn_Copy_Click" BorderBrush="#FF19B7CE"  Background="#FF19B7CE" Foreground="#FFF6EEEE" FontFamily="Akhbar MT" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="btn_Copy1"  Content="&#xA;&#xA;&#xD;&#xA;METTRE A JOUR" HorizontalAlignment="Left" Margin="588,182,0,0" VerticalAlignment="Top" Height="126" Width="149" Click="btn_Copy1_Click_1" BorderBrush="#FF19B7CE"  Background="#FF19B7CE" Foreground="#FFF6EEEE" FontFamily="Akhbar MT" FontSize="14" FontWeight="Bold" />
+
+
     </Grid>
 </Window>

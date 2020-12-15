@@ -16,13 +16,38 @@ using System.Windows.Shapes;
 namespace PcCleaner
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void btn_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void btn_Copy1_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void btn_Copy_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
