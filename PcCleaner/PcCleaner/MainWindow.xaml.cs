@@ -25,29 +25,28 @@ namespace PcCleaner
             InitializeComponent();
         }
 
-        private void btn_Click(object sender, RoutedEventArgs e)
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Test");
+            MessageBox.Show("testing");
         }
-
-        private void btn_Copy1_Click(object sender, RoutedEventArgs e)
+        private void Analys_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Test");
+            MessageBox.Show("analys");
         }
-
-        private void btn_Copy1_Click_1(object sender, RoutedEventArgs e)
+        private void Clean_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Test");
+            MessageBox.Show("clean");
         }
-
-        private void btn_Copy_Click(object sender, RoutedEventArgs e)
+        private void Story_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("story");
         }
-
-        private void btn_Click_1(object sender, RoutedEventArgs e)
+        private void Maj_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("mise a jour");
         }
     }
 }

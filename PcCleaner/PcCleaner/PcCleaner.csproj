@@ -6,4 +6,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="broom.png" />
+    <None Remove="magnifier.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="broom.png" />
+    <Resource Include="magnifier.png" />
+  </ItemGroup>
+
 </Project>
