@@ -40,31 +40,6 @@ namespace PcCleaner
 
         }
 
-
-
-
-        private void Analys_Click(object sender, RoutedEventArgs e)
-        {
-            //1: start analys
-            pb1.Visibility = Visibility.Visible;
-            //txt1.Visibility = Visibility.Hidden;
-            txt2.Visibility = Visibility.Hidden;
-            txt3.Visibility = Visibility.Hidden;
-            title.Text = "Analyse en cours";
-            list_1.IsEnabled = false;
-            list_2.IsEnabled = false;
-            list_3.IsEnabled = false;
-            list_4.IsEnabled = false;
-            list_5.IsEnabled = false;
-           // nettoyer.IsEnabled = false;
-           // msj.IsEnabled = false;
-           // historique.IsEnabled = false;
-            Loadprogressbar();
-
-            // 2: show result of scan all files found
-            Scanner();
-
-        }
         
         public long size;
 
@@ -86,18 +61,17 @@ namespace PcCleaner
             }
             txt1.Text = "Espace à nettoyer : " + size/1000 + " Ko (" + Nombre + " files)";
             txt2.Text = "Derniére analyse : " + DateTime.Now.ToString();
-            
 
-            //pb1.Visibility = Visibility.Hidden;
-            title.Text = "L'analyse est terminée";
+            pb1.Visibility = Visibility.Visible;
+            title.Text = "L'analyse en cours";
             txt1.Visibility = Visibility.Visible;
             txt2.Visibility = Visibility.Visible;
             txt3.Visibility = Visibility.Visible;
-            list_1.IsEnabled = true;
-            list_2.IsEnabled = true;
-            list_3.IsEnabled = true;
-            list_4.IsEnabled = true;
-            list_5.IsEnabled = true;
+            list_1.IsEnabled = false;
+            list_2.IsEnabled = false;
+            list_3.IsEnabled = false;
+            list_4.IsEnabled = false;
+            list_5.IsEnabled = false;
             nettoyer.IsEnabled = true;
             msj.IsEnabled = true;
             historique.IsEnabled = true;
@@ -113,6 +87,16 @@ namespace PcCleaner
            
            
         }
+
+        private void Analys_Click(object sender, RoutedEventArgs e)
+        {
+
+            Loadprogressbar();
+            Scanner();
+
+        }
+
+
         public string timeclean;
         private void Clean_Click(object sender, RoutedEventArgs e)
         {
@@ -132,6 +116,8 @@ namespace PcCleaner
             timeclean = DateTime.Now.ToString();
             MessageBox.Show("delete done");
         }
+
+
         private void Story_Click(object sender, RoutedEventArgs e)
         {
 
