@@ -15,6 +15,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 using System.Windows.Media.Animation;
+using System.Net;
+using System.Diagnostics;
+using Microsoft.Win32;  //filedialog
+using System.Security.AccessControl;
 
 namespace PcCleaner
 {
@@ -24,10 +28,6 @@ namespace PcCleaner
     public partial class MainWindow : Window
     {
 
-      
-
-
-
         public MainWindow()
         {
             InitializeComponent();
@@ -35,11 +35,13 @@ namespace PcCleaner
 
         }
 
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("testing");
+
         }
+
+
+
 
         private void Analys_Click(object sender, RoutedEventArgs e)
         {
@@ -54,40 +56,39 @@ namespace PcCleaner
             list_3.IsEnabled = false;
             list_4.IsEnabled = false;
             list_5.IsEnabled = false;
-            nettoyer.IsEnabled = false;
-            msj.IsEnabled = false;
-            historique.IsEnabled = false;
+           // nettoyer.IsEnabled = false;
+           // msj.IsEnabled = false;
+           // historique.IsEnabled = false;
             Loadprogressbar();
 
             // 2: show result of scan all files found
             Scanner();
 
         }
+        
+        public long size;
+
         private void Scanner()
         {
-            
             List<string> listFiles = new List<string>();
             var tmpPath = System.IO.Path.GetTempPath();
             var files = Directory.GetFiles(tmpPath, "*.*", SearchOption.AllDirectories);
             listFiles.AddRange(files);
             var Nombre = listFiles.Count();
-            long size = 0;
+            size = 0;
 
-            StreamWriter writer = new StreamWriter(@"C:\Users\youcode\source\repos\story.txt");
+            FileStream fs = new FileStream(@"C:\Users\youcode\source\repos\story.txt", FileMode.OpenOrCreate); // create file
+            StreamWriter sw = new StreamWriter(fs); // write in the file
             foreach (var file in files)
             {
-
                 size += file.Length;
-                writer.Write(file + "\n");
+                sw.Write(file + "\n");
             }
             txt1.Text = "Espace à nettoyer : " + size/1000 + " Ko (" + Nombre + " files)";
             txt2.Text = "Derniére analyse : " + DateTime.Now.ToString();
             
 
-
-
-
-            /*pb1.Visibility = Visibility.Hidden;
+            //pb1.Visibility = Visibility.Hidden;
             title.Text = "L'analyse est terminée";
             txt1.Visibility = Visibility.Visible;
             txt2.Visibility = Visibility.Visible;
@@ -100,7 +101,8 @@ namespace PcCleaner
             nettoyer.IsEnabled = true;
             msj.IsEnabled = true;
             historique.IsEnabled = true;
-            */
+           
+           
         }
 
         private void Loadprogressbar()
@@ -111,46 +113,40 @@ namespace PcCleaner
            
            
         }
+        public string timeclean;
         private void Clean_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("clean");
+            List<string> listFiles = new List<string>();
+            var tmpPath = System.IO.Path.GetTempPath();
+            var files = Directory.GetFiles(tmpPath, "*.*", SearchOption.AllDirectories);
+
+           
+
+            foreach (var file in files)
+                {
+                    if (File.Exists(file))
+                    {
+                        File.Delete(file);
+                    }
+                }
+            timeclean = DateTime.Now.ToString();
+            MessageBox.Show("delete done");
         }
         private void Story_Click(object sender, RoutedEventArgs e)
         {
-            String line;
 
-            // StreamReader reader = new StreamReader(@"C:\Users\youcode\source\repos\story.txt");
-            //string fileContent = reader.ReadToEnd();
-            //string[] lines = File.ReadAllLines(@"C:\Users\youcode\source\repos\story.txt");
-            StreamReader sr = new StreamReader(@"C: \story.txt");
-            //Read the first line of text
-            line = sr.ReadLine();
-            //Continue to read until you reach end of file
-            while (line != null)
-            {
-                //write the lie to console window
-                Console.WriteLine(line);
-                //Read the next line
-                line = sr.ReadLine();
-            }
-            //close the file
-            sr.Close();
-            Console.ReadLine();
+           MessageBox.Show(size.ToString()+ "\n" + timeclean);
+
         }
-
-
-
 
     
         private void Maj_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("mise a jour");
-            //String URLString = "https://github.com/sana-ben036/WPFapplication-Brief3.git";
-            // import from ;
+            
+
+
         }
 
-
-
-
+        
     }
 }

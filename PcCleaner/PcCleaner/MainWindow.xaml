@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PC_Cleaner" Height="500" Width="800" >
     <Grid Background="#FFEEEEE5">
-       
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -20,10 +20,10 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
-        <Rectangle HorizontalAlignment="Center" 
-                   Height="484" 
-                   VerticalAlignment="Top" 
+
+        <Rectangle  
+                   
+                    
                    Width="200" 
                    Grid.RowSpan="4">
             <Rectangle.Fill>
@@ -39,19 +39,15 @@
         </Rectangle>
         <Rectangle Grid.Column="1" 
                    Grid.ColumnSpan="4" 
-                   HorizontalAlignment="Center" 
+                   
                    Height="121" 
-                   VerticalAlignment="Center" 
-                   Width="600" 
+                   
                    RenderTransformOrigin="0.792,0.252" 
                    Fill="#FF143257"/>
         <Rectangle Grid.Column="1" 
                    Grid.ColumnSpan="4" 
                    Grid.Row="3" 
-                   HorizontalAlignment="Center" 
                    Height="121" 
-                   VerticalAlignment="Center" 
-                   Width="600" 
                    RenderTransformOrigin="0.792,0.252" 
                    Fill="#FF276FCA"/>
 
@@ -108,7 +104,7 @@
                 FontFamily="Arial" 
                 Opacity="0.8" 
                 Click="Analys_Click"/>
-       
+
         <TextBlock Name="title" 
                    Grid.Column="1" 
                    Grid.Row="0" 
@@ -261,11 +257,26 @@
                Margin="118,10,34,65"/>
         <ProgressBar  Name="pb1" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="10"   Visibility="Hidden"
                       Margin="55,39,45,72"></ProgressBar>
+        <TextBlock Name="story"
+                   Visibility="Hidden"
+                   Grid.Column="1" 
+                   Grid.ColumnSpan="3" 
+                   Grid.Row="1" 
+                   TextWrapping="Wrap"  
+                   Height="239" 
+                   Grid.RowSpan="2" 
+                   Width="600" 
+                   Background="#FFEEEEE5" 
+                   FontSize="14">
+            <Run Text=" Historique :"/>
+        </TextBlock>
+
+
 
 
 
 
 
     </Grid>
-    
+
 </Window>
