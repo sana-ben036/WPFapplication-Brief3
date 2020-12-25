@@ -1,0 +1,15 @@
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Debug\UpdateApp.exe.config
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Debug\UpdateApp.exe
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Debug\UpdateApp.pdb
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp.csprojAssemblyReference.cache
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\MainWindow.g.cs
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\App.g.cs
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp_MarkupCompile.cache
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp_MarkupCompile.lref
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\MainWindow.baml
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp.g.resources
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp.Properties.Resources.resources
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp.csproj.GenerateResource.cache
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp.csproj.CoreCompileInputs.cache
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp.exe
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Debug\UpdateApp.pdb

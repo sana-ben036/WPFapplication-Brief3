@@ -4,7 +4,6 @@ C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcClea
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Debug\netcoreapp3.1\PcCleaner.runtimeconfig.dev.json
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Debug\netcoreapp3.1\PcCleaner.dll
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Debug\netcoreapp3.1\PcCleaner.pdb
-C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\obj\Debug\netcoreapp3.1\PcCleaner.csprojAssemblyReference.cache
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\obj\Debug\netcoreapp3.1\PcCleaner_MarkupCompile.cache
@@ -20,3 +19,4 @@ C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcClea
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Debug\netcoreapp3.1\FontAwesome.Sharp.dll
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\obj\Debug\netcoreapp3.1\PcCleaner.csproj.CopyComplete
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Debug\netcoreapp3.1\PcCleaner.dll.config
+C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\obj\Debug\netcoreapp3.1\PcCleaner.csprojAssemblyReference.cache

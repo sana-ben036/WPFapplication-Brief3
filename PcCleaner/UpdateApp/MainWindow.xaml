@@ -1,0 +1,235 @@
+﻿<Window x:Class="UpdateApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UpdateApp"
+        mc:Ignorable="d"
+        Title="SuperCleaner" Height="500" Width="800">
+    <Grid Background="#FFEEEEE5">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Rectangle  
+                   
+                    
+                   Width="200" 
+                   Grid.RowSpan="4" Fill="#FF4D1457"/>
+        <Rectangle Grid.Column="1" 
+                   Grid.ColumnSpan="4" 
+                   
+                   Height="121" 
+                   
+                   RenderTransformOrigin="0.792,0.252" 
+                   Fill="#FF4D1457"/>
+        <Rectangle Grid.Column="1" 
+                   Grid.ColumnSpan="4" 
+                   Grid.Row="3" 
+                   Height="121" 
+                   RenderTransformOrigin="0.792,0.252" 
+                   Fill="Violet"/>
+
+
+        <Button Name="analyser" 
+                Grid.Column="3" 
+                Grid.Row="0" 
+                Width="150" 
+                Height="40" 
+                Content="ANALYSER" 
+                BorderBrush="#FF143257" 
+                Foreground="#FF143257" 
+                Background="#FFE4EFF4" 
+                FontSize="16" 
+                FontWeight="Bold" 
+                FontFamily="Arial" 
+                Opacity="0.8" 
+                Click="Analys_Click"/>
+
+        <TextBlock Name="title" 
+                   Grid.Column="1" 
+                   Grid.Row="0" 
+                   Margin="55,13,24,77" 
+                   Grid.ColumnSpan="2" 
+                   FontFamily="Arial" 
+                   FontSize="20" 
+                   FontWeight="Bold" 
+                   Foreground="#FFF3E4E4">
+                   Analyse du PC nécessaire
+        </TextBlock>
+        <TextBlock Name="txt1"  
+                   Grid.Column="1" 
+                   Grid.Row="0" 
+                   Margin="55,51,24,47" 
+                   Grid.ColumnSpan="2" 
+                   FontFamily="Arial" 
+                   FontSize="14" 
+                   FontWeight="Normal" 
+                   Foreground="#FFF7E7E7">
+                   Espase à nettoyer : à determiner aprés l'analyse
+        </TextBlock>
+        <TextBlock Name="txt2" 
+                   Grid.Column="1" 
+                   Grid.Row="0" 
+                   Margin="55,73,24,25" 
+                   Grid.ColumnSpan="2" 
+                   FontFamily="Arial" 
+                   FontSize="14" 
+                   FontWeight="Normal" 
+                   Foreground="#FFEAD8D8">
+                   Derniére analyse :
+        </TextBlock>
+        <TextBlock Name="txt3"
+                   Grid.Column="1" 
+                   Grid.Row="0" 
+                   Margin="55,96,24,2" 
+                   Grid.ColumnSpan="2" 
+                   FontFamily="Arial" 
+                   FontSize="14" 
+                   FontWeight="Normal" 
+                   Foreground="#FFEEE0E0">
+                   Derniére MAJ :
+        </TextBlock>
+        <TextBlock Grid.Column="1" 
+                   Grid.Row="3" 
+                   Margin="40,32,40,33" 
+                   Grid.ColumnSpan="3" 
+                   FontFamily="Arial" 
+                   FontSize="14" 
+                   FontWeight="Bold" 
+                   Foreground="#FFF4E7E7">
+            <Run Text="PC_CLEANER est un logiciel crée au Maroc qui respecte votre vie privée."/>
+                   <LineBreak/><Run/><LineBreak/>
+            <Run Text="C'est un logiciel gratuit."/><LineBreak/><Run/>
+        </TextBlock>
+        <TextBlock Grid.Column="0" 
+                   Grid.Row="0" 
+                   Margin="35,26,35,26" 
+                   FontFamily="Agency FB" 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   Foreground="#FFF1E9E9"><Run Text="SUPER"/><LineBreak/><Run Text="PC_CLEANER"/><LineBreak/><Run/></TextBlock>
+
+        <Button Name="list_1"  
+                Grid.Column="0" 
+                BorderBrush="{x:Null}" 
+                Foreground="#FFF1F4F6" 
+                Background="Violet" 
+                FontSize="14" 
+                FontWeight="Normal" 
+                FontFamily="Arial" 
+                Height="58" 
+                Margin="-1,1,0,62" 
+                Click="Button_Click" 
+                Grid.Row="1" 
+                Content="VUE D'ENSEMBLE"/>
+
+        <Button Name="list_2" 
+                Grid.Column="0" 
+                BorderBrush="{x:Null}" 
+                Foreground="#FFF1F4F6" 
+                Background="Violet" 
+                FontSize="14" 
+                FontWeight="Normal" 
+                FontFamily="Arial" 
+                Height="58" 
+                Margin="-1,60,0,3" 
+                Click="Analys_Click" 
+                Grid.Row="1"  
+                Content="ANALYSER"  />
+        <Button Name="list_3" 
+                Grid.Column="0" 
+                BorderBrush="{x:Null}" 
+                Foreground="#FFF1F4F6" 
+                Background="Violet" 
+                FontSize="14" 
+                FontWeight="Normal" 
+                FontFamily="Arial" 
+                Height="58" 
+                Margin="-1,121,0,63" 
+                Click="Story_Click" 
+                Grid.Row="1"  
+                Content="HISTORIQUE" 
+                Grid.RowSpan="2"  />
+        <Button Name="list_4" 
+                Grid.Column="0" 
+                BorderBrush="{x:Null}" 
+                Foreground="#FFF1F4F6" 
+                Background="Violet" 
+                FontSize="14" 
+                FontWeight="Normal" 
+                FontFamily="Arial" 
+                Height="58" 
+                Margin="-1,60,0,3" 
+                Click="Button_Click" 
+                Grid.Row="2"  
+                Content="OPTIONS"  />
+        <TextBlock x:Name="version"
+                   Grid.Row="3" 
+                   Margin="5,92,5,0" 
+                   FontFamily="Arial" 
+                   FontSize="14" 
+                   FontWeight="Bold" 
+                   Foreground="#FFF4E7E7"><Run Text="Version "/><Run Text="1."/><Run Text="1"/><LineBreak/><Run/></TextBlock>
+        <Button Name="list_5" 
+                Content="SITE WEB" 
+                HorizontalAlignment="Left" 
+                Margin="25"
+                Grid.Row="3" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="-1.534,0.552" 
+                Width="140" 
+                BorderBrush="#FFF6EEEE" 
+                Foreground="#FFF6EEEE" 
+                Background="Violet" 
+                FontSize="16" 
+                FontWeight="Bold" 
+                FontFamily="Arial" 
+                Click="Button_Click"/>
+
+        <ProgressBar  Name="pb1" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="10"   Visibility="Hidden"
+                      Margin="55,39,45,72"></ProgressBar>
+        <ProgressBar  Name="pb2" Grid.Column="1" Grid.ColumnSpan="3" Width="400" Height="50"   
+                      Margin="89.6,93.4,105.6,91.8" Grid.Row="1" Grid.RowSpan="2">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFBA54D1" Offset="0.221"/>
+                    <GradientStop Color="#FFBA54D1" Offset="0.343"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <TextBlock Name="story"
+                   Visibility="Hidden"
+                   Grid.Column="1" 
+                   Grid.ColumnSpan="3" 
+                   Grid.Row="1" 
+                   TextWrapping="Wrap"  
+                   Height="239" 
+                   Grid.RowSpan="2" 
+                   Width="600" 
+                   Background="#FFEEEEE5" 
+                   FontSize="14">
+            <Run Text=" Historique :"/>
+        </TextBlock>
+
+
+
+
+
+
+
+    </Grid>
+
+</Window>
+

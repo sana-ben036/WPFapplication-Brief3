@@ -17,8 +17,8 @@ using System.ComponentModel;
 using System.Windows.Media.Animation;
 using System.Net;
 using System.Diagnostics;
-using Microsoft.Win32;  //filedialog
 using System.Security.AccessControl;
+using System.IO.Compression;
 
 namespace PcCleaner
 {
@@ -84,7 +84,7 @@ namespace PcCleaner
             Duration duré = new Duration(TimeSpan.FromSeconds(10));
             DoubleAnimation animation = new DoubleAnimation(200.0, duré);
             pb1.BeginAnimation(ProgressBar.ValueProperty, animation);
-           
+            
            
         }
 
@@ -125,14 +125,64 @@ namespace PcCleaner
 
         }
 
-    
+
+
+
+        double clientVersion = 1.0;
+        string updatePath;
+        string packageFile;
+        WebClient webClient;
+
+
         private void Maj_Click(object sender, RoutedEventArgs e)
         {
-            
+            webClient = new WebClient();
+            Uri webVersion = new Uri("https://sendeyo.com/up/d/dc4418b341");
+            webClient.DownloadStringAsync(webVersion);
+            webClient.DownloadStringCompleted += webClient_DownloadStringCompleted;
 
 
         }
 
-        
+        private void webClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        {
+            string strWebVersion = e.Result;
+            double webVersion = double.Parse(strWebVersion);
+
+            if(clientVersion < webVersion)
+            {
+                MessageBox.Show("Une nouvelle version est disponible !");
+                
+                /*
+                updatePath = System.IO.Path.Combine(@"update\", strWebVersion.Replace(",", "."));
+                Uri package = new Uri("");
+                string zipPath = @".\UPDATE.zip";
+
+                 Directory.CreateDirectory(updatePath);
+                 packageFile = System.IO.Path.Combine(updatePath, "update.exe");
+                 webClient.DownloadFileCompleted += WebClient_downloadfileCompleted;
+                 webClient.DownloadFileAsync(package, packageFile);
+                */
+
+                Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Release\UpdateApp.exe");
+                this.Close();
+
+
+
+
+
+            }else
+            {
+                MessageBox.Show(" l'application est déja à jour !");
+
+            }
+
+            
+        }
+
+        private void WebClient_downloadfileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            //Process.Start(packageFile);
+        }
     }
 }

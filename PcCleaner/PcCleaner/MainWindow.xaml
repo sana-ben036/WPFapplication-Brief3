@@ -226,15 +226,13 @@
                 Click="Button_Click" 
                 Grid.Row="2"  
                 Content="OPTIONS"  />
-        <TextBlock Grid.Row="3" 
+        <TextBlock x:Name="version"
+                   Grid.Row="3" 
                    Margin="5,92,5,0" 
                    FontFamily="Arial" 
                    FontSize="14" 
                    FontWeight="Bold" 
-                   Foreground="#FFF4E7E7">
-            <Run Language="fr-ma" Text="Version 1.0.0"/><LineBreak/>
-            <Run/>
-        </TextBlock>
+                   Foreground="#FFF4E7E7"><Run Text="Version "/><Run Text="1."/><Run Language="fr-ma" Text="0"/><LineBreak/><Run/></TextBlock>
         <Button Name="list_5" 
                 Content="SITE WEB" 
                 HorizontalAlignment="Left" 
