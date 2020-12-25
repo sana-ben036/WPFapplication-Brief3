@@ -1,7 +1,6 @@
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Release\UpdateApp.exe.config
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Release\UpdateApp.exe
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Release\UpdateApp.pdb
-C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Release\UpdateApp.csprojAssemblyReference.cache
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Release\MainWindow.g.cs
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Release\App.g.cs
 C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\obj\Release\UpdateApp_MarkupCompile.cache

@@ -32,26 +32,8 @@ namespace UpdateApp
         {
             
             InitializeComponent();
-            Loadprogressbar();
 
-            WebClient webClient = new WebClient();
-            var client = new WebClient();
 
-            try
-            {
-                //System.Threading.Thread.Sleep(1000);
-                client.DownloadFile("https://sendeyo.com/up/d/db3d0240c2", @"PcCleaner.zip");
-                string zipPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Release\PcCleaner.zip";
-                string extractPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1";
-                ZipFile.ExtractToDirectory(zipPath, extractPath);
-                //File.Delete(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Release\PcCleaner.zip");
-                Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe");
-                this.Close();
-            }
-            catch
-            {
-
-            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -129,6 +111,48 @@ namespace UpdateApp
         private void Maj_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void GetVersion_Click(object sender, RoutedEventArgs e)
+        {
+            
+            
+            pb2.Visibility = Visibility.Visible;
+            GetVersion.Visibility = Visibility.Hidden;
+            NoGetVersion.Visibility = Visibility.Hidden;
+            Loadprogressbar();
+
+            WebClient webClient = new WebClient();
+            var client = new WebClient();
+
+            try
+            {
+                System.Threading.Thread.Sleep(1000);
+                client.DownloadFile("https://sendeyo.com/up/d/0598c98a7f", @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip");
+                string zipPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip";
+                string extractPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1";
+                ZipFile.ExtractToDirectory(zipPath, extractPath);
+                File.Delete(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip");
+
+                Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe");
+                this.Close();
+            }
+
+            catch
+            {
+
+            }
+
+        }
+
+        private void NoGetVersion_Click(object sender, RoutedEventArgs e)
+        {
+
+            //ProcessStartInfo startInfo = new ProcessStartInfo();
+            //startInfo.FileName = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe";
+
+            Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe");
+            this.Close();
         }
     }
 }

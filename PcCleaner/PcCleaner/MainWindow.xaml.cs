@@ -43,8 +43,22 @@ namespace PcCleaner
         
         public long size;
 
-        private void Scanner()
+        
+
+        private void Loadprogressbar()
         {
+            Duration duré = new Duration(TimeSpan.FromSeconds(10));
+            DoubleAnimation animation = new DoubleAnimation(200.0, duré);
+            pb1.BeginAnimation(ProgressBar.ValueProperty, animation);
+            
+           
+        }
+
+        private void Analys_Click(object sender, RoutedEventArgs e)
+        {
+
+            Loadprogressbar();
+
             List<string> listFiles = new List<string>();
             var tmpPath = System.IO.Path.GetTempPath();
             var files = Directory.GetFiles(tmpPath, "*.*", SearchOption.AllDirectories);
@@ -59,7 +73,7 @@ namespace PcCleaner
                 size += file.Length;
                 sw.Write(file + "\n");
             }
-            txt1.Text = "Espace à nettoyer : " + size/1000 + " Ko (" + Nombre + " files)";
+            txt1.Text = "Espace à nettoyer : " + size / 1000 + " Ko (" + Nombre + " files)";
             txt2.Text = "Derniére analyse : " + DateTime.Now.ToString();
 
             pb1.Visibility = Visibility.Visible;
@@ -75,24 +89,6 @@ namespace PcCleaner
             nettoyer.IsEnabled = true;
             msj.IsEnabled = true;
             historique.IsEnabled = true;
-           
-           
-        }
-
-        private void Loadprogressbar()
-        {
-            Duration duré = new Duration(TimeSpan.FromSeconds(10));
-            DoubleAnimation animation = new DoubleAnimation(200.0, duré);
-            pb1.BeginAnimation(ProgressBar.ValueProperty, animation);
-            
-           
-        }
-
-        private void Analys_Click(object sender, RoutedEventArgs e)
-        {
-
-            Loadprogressbar();
-            Scanner();
 
         }
 
@@ -129,8 +125,6 @@ namespace PcCleaner
 
 
         double clientVersion = 1.0;
-        string updatePath;
-        string packageFile;
         WebClient webClient;
 
 
@@ -153,17 +147,6 @@ namespace PcCleaner
             {
                 MessageBox.Show("Une nouvelle version est disponible !");
                 
-                /*
-                updatePath = System.IO.Path.Combine(@"update\", strWebVersion.Replace(",", "."));
-                Uri package = new Uri("");
-                string zipPath = @".\UPDATE.zip";
-
-                 Directory.CreateDirectory(updatePath);
-                 packageFile = System.IO.Path.Combine(updatePath, "update.exe");
-                 webClient.DownloadFileCompleted += WebClient_downloadfileCompleted;
-                 webClient.DownloadFileAsync(package, packageFile);
-                */
-
                 Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\UpdateApp\bin\Release\UpdateApp.exe");
                 this.Close();
 
@@ -180,9 +163,6 @@ namespace PcCleaner
             
         }
 
-        private void WebClient_downloadfileCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            //Process.Start(packageFile);
-        }
+        
     }
 }

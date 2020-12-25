@@ -25,21 +25,31 @@
                    
                     
                    Width="200" 
-                   Grid.RowSpan="4" Fill="#FF4D1457"/>
+                   Grid.RowSpan="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush 
+                    EndPoint="0.5,1" 
+                    StartPoint="0.5,0">
+                    <GradientStop Color="#FF143257" 
+                                  Offset="0.158"/>
+                    <GradientStop Color="#FF276FCA" 
+                                  Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Rectangle Grid.Column="1" 
                    Grid.ColumnSpan="4" 
                    
                    Height="121" 
                    
                    RenderTransformOrigin="0.792,0.252" 
-                   Fill="#FF4D1457"/>
+                   Fill="#FF143257"/>
         <Rectangle Grid.Column="1" 
                    Grid.ColumnSpan="4" 
                    Grid.Row="3" 
                    Height="121" 
                    RenderTransformOrigin="0.792,0.252" 
-                   Fill="Violet"/>
-
+                   Fill="#FF276FCA"/>
 
         <Button Name="analyser" 
                 Grid.Column="3" 
@@ -118,13 +128,13 @@
                    FontFamily="Agency FB" 
                    FontSize="24" 
                    FontWeight="Bold" 
-                   Foreground="#FFF1E9E9"><Run Text="SUPER"/><LineBreak/><Run Text="PC_CLEANER"/><LineBreak/><Run/></TextBlock>
+                   Foreground="#FFF1E9E9"><Run Text="MINI"/><LineBreak/><Run Text="PC_CLEANER"/><LineBreak/><Run/></TextBlock>
 
         <Button Name="list_1"  
                 Grid.Column="0" 
                 BorderBrush="{x:Null}" 
                 Foreground="#FFF1F4F6" 
-                Background="Violet" 
+                Background="#FF1390C7" 
                 FontSize="14" 
                 FontWeight="Normal" 
                 FontFamily="Arial" 
@@ -138,7 +148,7 @@
                 Grid.Column="0" 
                 BorderBrush="{x:Null}" 
                 Foreground="#FFF1F4F6" 
-                Background="Violet" 
+                Background="#FF1390C7" 
                 FontSize="14" 
                 FontWeight="Normal" 
                 FontFamily="Arial" 
@@ -151,7 +161,7 @@
                 Grid.Column="0" 
                 BorderBrush="{x:Null}" 
                 Foreground="#FFF1F4F6" 
-                Background="Violet" 
+                Background="#FF1390C7" 
                 FontSize="14" 
                 FontWeight="Normal" 
                 FontFamily="Arial" 
@@ -165,7 +175,7 @@
                 Grid.Column="0" 
                 BorderBrush="{x:Null}" 
                 Foreground="#FFF1F4F6" 
-                Background="Violet" 
+                Background="#FF1390C7" 
                 FontSize="14" 
                 FontWeight="Normal" 
                 FontFamily="Arial" 
@@ -191,7 +201,7 @@
                 Width="140" 
                 BorderBrush="#FFF6EEEE" 
                 Foreground="#FFF6EEEE" 
-                Background="Violet" 
+                Background="#FF1390C7" 
                 FontSize="16" 
                 FontWeight="Bold" 
                 FontFamily="Arial" 
@@ -199,13 +209,13 @@
 
         <ProgressBar  Name="pb1" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="10"   Visibility="Hidden"
                       Margin="55,39,45,72"></ProgressBar>
-        <ProgressBar  Name="pb2" Grid.Column="1" Grid.ColumnSpan="3" Width="400" Height="50"   
+        <ProgressBar  Name="pb2" Grid.Column="1" Grid.ColumnSpan="3" Width="400" Height="50"   Visibility="Hidden"
                       Margin="89.6,93.4,105.6,91.8" Grid.Row="1" Grid.RowSpan="2">
             <ProgressBar.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FFBA54D1" Offset="0.221"/>
-                    <GradientStop Color="#FFBA54D1" Offset="0.343"/>
+                    <GradientStop Color="#FF1390C7" Offset="0.221"/>
+                    <GradientStop Color="#FF1390C7" Offset="0.343"/>
                 </LinearGradientBrush>
             </ProgressBar.Foreground>
         </ProgressBar>
@@ -222,6 +232,41 @@
                    FontSize="14">
             <Run Text=" Historique :"/>
         </TextBlock>
+        <Button Name="GetVersion" 
+                Grid.Column="1" 
+                Grid.RowSpan="2" 
+                Width="150" 
+                Height="150" 
+                BorderBrush="#FFF6EEEE" 
+                Foreground="#FFF1F4F6" 
+                Background="#FF1390C7" 
+                FontSize="16" 
+                FontWeight="Bold" 
+                FontFamily="Arial" 
+                Content="Télécharger &#xD;&#xA;maintenant" 
+                Click="GetVersion_Click" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Margin="125.6,60.4,121.2,24.8" Grid.Row="1"/>
+        <TextBlock x:Name="title_Copy" 
+            Grid.Column="1" 
+            Grid.Row="1" 
+            Margin="81.6,8.4,81.6,81.2" 
+            Grid.ColumnSpan="3" 
+            FontFamily="Arial" 
+            FontSize="20" 
+            FontWeight="Bold" 
+            Foreground="#FF0B54A3" Text="Voulez vous télecharger la nouvelle version?"/>
+        <Button x:Name="NoGetVersion" 
+            Grid.Column="2" 
+            Grid.RowSpan="2" 
+            Width="150" 
+            Height="150" 
+            BorderBrush="#FFF6EEEE" 
+            Foreground="#FFF1F4F6" 
+            Background="#FF1390C7" 
+            FontSize="16" 
+            FontWeight="Bold" 
+            FontFamily="Arial" 
+            Content="Télécharger &#xD;&#xA;Plus tard" 
+            Click="NoGetVersion_Click" RenderTransformOrigin="0.5,0.5" Margin="124.2,60.4,122.6,24.8" Grid.Row="1" Grid.ColumnSpan="2"/>
 
 
 
