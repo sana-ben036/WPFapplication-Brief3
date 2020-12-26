@@ -32,9 +32,9 @@ namespace UpdateApp
         {
             
             InitializeComponent();
-           
 
            
+
 
         }
 
@@ -115,36 +115,41 @@ namespace UpdateApp
 
         }
 
+        
+
         private void GetVersion_Click(object sender, RoutedEventArgs e)
         {
-            
-            
+
+            Loadprogressbar();
             pb2.Visibility = Visibility.Visible;
             GetVersion.Visibility = Visibility.Hidden;
             NoGetVersion.Visibility = Visibility.Hidden;
-            Loadprogressbar();
-
+            
+            
             WebClient webClient = new WebClient();
 
             try
             {
 
-                System.Threading.Thread.Sleep(1000);
+
+                //System.Threading.Thread.Sleep(5000);
                 webClient.DownloadFile("https://sendeyo.com/up/d/0598c98a7f", @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip");
                 string zipPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip";
-                string extractPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1";
+                string extractPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release";
                 ZipFile.ExtractToDirectory(zipPath, extractPath);
                 File.Delete(zipPath);
 
-                Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe");
+                Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\PcCleaner.exe");
                 this.Close();
 
             }
             catch
             {
+                Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe");
+                this.Close();
 
             }
-
+            
 
 
         }

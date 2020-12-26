@@ -3,3 +3,9 @@ Operation de nettoyage : 666ko   26/12/2020 18:36:33
 Operation de nettoyage : 670ko   26/12/2020 18:39:23
 Operation de nettoyage : 670ko   26/12/2020 18:39:55
 Operation de nettoyage : 646ko   26/12/2020 18:42:17
+Operation de nettoyage : 648ko   26/12/2020 20:47:02
+Operation de nettoyage : 648ko   26/12/2020 20:47:02
+Operation de nettoyage : 649ko   26/12/2020 20:55:39
+Operation de nettoyage : 674ko   26/12/2020 21:28:03
+Operation de nettoyage : 674ko   26/12/2020 21:29:40
+Operation d'analyse : 649ko   26/12/2020 21:40:14
