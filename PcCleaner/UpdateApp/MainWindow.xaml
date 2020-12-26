@@ -190,7 +190,7 @@
                    FontFamily="Arial" 
                    FontSize="14" 
                    FontWeight="Bold" 
-                   Foreground="#FFF4E7E7"><Run Text="Version "/><Run Text="1."/><Run Text="1"/><LineBreak/><Run/></TextBlock>
+                   Foreground="#FFF4E7E7"><Run Text="Version "/><Run Text="1."/><Run Text="0"/><LineBreak/><Run/></TextBlock>
         <Button Name="list_5" 
                 Content="SITE WEB" 
                 HorizontalAlignment="Left" 

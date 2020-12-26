@@ -31,19 +31,37 @@ namespace PcCleaner
         public MainWindow()
         {
             InitializeComponent();
+
            
 
         }
 
+        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe");
+            this.Close();
         }
 
         
-        public long size;
-
         
+        public void Scan()
+        {
+            List<string> listFiles = new List<string>();
+            var tmpPath = System.IO.Path.GetTempPath();
+            var files = Directory.GetFiles(tmpPath, "*.*", SearchOption.AllDirectories);
+            listFiles.AddRange(files);
+            Nombre = listFiles.Count();
+            size = 0;
+            
+            foreach (var file in files)
+            {
+                size += file.Length;
+                
+            }
+        }
+       
 
         private void Loadprogressbar()
         {
@@ -53,50 +71,58 @@ namespace PcCleaner
             
            
         }
-
+        public string timeAnalys;
+        public long size;
+        public int Nombre;
         private void Analys_Click(object sender, RoutedEventArgs e)
         {
 
             Loadprogressbar();
+            Scan();
 
-            List<string> listFiles = new List<string>();
-            var tmpPath = System.IO.Path.GetTempPath();
-            var files = Directory.GetFiles(tmpPath, "*.*", SearchOption.AllDirectories);
-            listFiles.AddRange(files);
-            var Nombre = listFiles.Count();
-            size = 0;
+            timeAnalys = DateTime.Now.ToString();
 
-            FileStream fs = new FileStream(@"C:\Users\youcode\source\repos\story.txt", FileMode.OpenOrCreate); // create file
-            StreamWriter sw = new StreamWriter(fs); // write in the file
-            foreach (var file in files)
-            {
-                size += file.Length;
-                sw.Write(file + "\n");
-            }
-            txt1.Text = "Espace à nettoyer : " + size / 1000 + " Ko (" + Nombre + " files)";
-            txt2.Text = "Derniére analyse : " + DateTime.Now.ToString();
+            txt1.Text = "Espace à nettoyer : " + size / 1024 + " Ko (" + Nombre + " files)";
+            txt2.Text = "Derniére analyse : " + timeAnalys;
 
             pb1.Visibility = Visibility.Visible;
             title.Text = "L'analyse en cours";
             txt1.Visibility = Visibility.Visible;
             txt2.Visibility = Visibility.Visible;
             txt3.Visibility = Visibility.Visible;
-            list_1.IsEnabled = false;
-            list_2.IsEnabled = false;
-            list_3.IsEnabled = false;
-            list_4.IsEnabled = false;
-            list_5.IsEnabled = false;
+            //list_1.IsEnabled = false;
+            //list_2.IsEnabled = false;
+            //list_3.IsEnabled = false;
+            //list_4.IsEnabled = false;
+            //list_5.IsEnabled = false;
             nettoyer.IsEnabled = true;
             msj.IsEnabled = true;
             historique.IsEnabled = true;
 
         }
+        
+        public void Info()
+        {
+            //FileStream fs = new FileStream(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\story.txt", FileMode.OpenOrCreate); // create file
+            //StreamWriter sw = new StreamWriter(fs); // write in the file
+            
+            //sw.Write(info);
+            
+
+        }
 
 
-        public string timeclean;
+        public string timeClean;
+        string path = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\story.txt";
+        //File.Create(path);
+        
+        public string info;
+        public List<string> infos;
+
+
         private void Clean_Click(object sender, RoutedEventArgs e)
         {
-            List<string> listFiles = new List<string>();
+            /*List<string> listFiles = new List<string>();
             var tmpPath = System.IO.Path.GetTempPath();
             var files = Directory.GetFiles(tmpPath, "*.*", SearchOption.AllDirectories);
 
@@ -108,17 +134,49 @@ namespace PcCleaner
                     {
                         File.Delete(file);
                     }
-                }
-            timeclean = DateTime.Now.ToString();
-            MessageBox.Show("delete done");
+                }*/
+            Scan();
+
+            title.Text = "Nettoyage en cours ";
+            timeClean = DateTime.Now.ToString();
+           
+            info ="Operation de nettoyage : " + size / 1024 + "ko" + "   " + timeClean ;
+            
+            
+
+            MessageBox.Show("Nettoyage est términé");
         }
 
 
         private void Story_Click(object sender, RoutedEventArgs e)
+
+
         {
+            nettoyer.Visibility = Visibility.Hidden;
+            msj.Visibility = Visibility.Hidden;
+            historique.Visibility = Visibility.Hidden;
+            txt1_story.Visibility = Visibility.Visible;
+            listBox1.Visibility = Visibility.Visible;
 
-           MessageBox.Show(size.ToString()+ "\n" + timeclean);
+            // File.WriteAllLines(path, infos);
+            // listBox1.Items.Add(File.ReadLines(infos));
 
+            /*
+            foreach (string info in infos)
+            {
+                listBox1.Items.Add(info);
+            }
+            */
+            infos = File.ReadAllLines(path).ToList();
+
+            infos.Add(info);
+            File.WriteAllLines(path, infos);
+
+            foreach(string info in infos)
+            {
+                listBox1.Items.Add(info);
+            }
+            
         }
 
 
@@ -163,6 +221,6 @@ namespace PcCleaner
             
         }
 
-        
+       
     }
 }

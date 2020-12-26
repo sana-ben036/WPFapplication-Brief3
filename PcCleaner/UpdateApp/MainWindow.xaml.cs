@@ -32,7 +32,9 @@ namespace UpdateApp
         {
             
             InitializeComponent();
+           
 
+           
 
         }
 
@@ -123,25 +125,27 @@ namespace UpdateApp
             Loadprogressbar();
 
             WebClient webClient = new WebClient();
-            var client = new WebClient();
 
             try
             {
+
                 System.Threading.Thread.Sleep(1000);
-                client.DownloadFile("https://sendeyo.com/up/d/0598c98a7f", @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip");
+                webClient.DownloadFile("https://sendeyo.com/up/d/0598c98a7f", @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip");
                 string zipPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip";
                 string extractPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1";
                 ZipFile.ExtractToDirectory(zipPath, extractPath);
-                File.Delete(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip");
+                File.Delete(zipPath);
 
                 Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\PcCleaner.exe");
                 this.Close();
-            }
 
+            }
             catch
             {
 
             }
+
+
 
         }
 
