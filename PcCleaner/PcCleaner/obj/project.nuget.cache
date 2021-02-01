@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qsXGEjx9aKTZS51PZrDyzRgoxbU6s8zdAA7UsxCPG9gHgJMHZpDh3xFMPks8/5aj5XH9PLUk9zELauzAwT1HOg==",
+  "dgSpecHash": "zgggZdqwVW21i5tl8IKqz8bv6YklU6EbP9Ti3X/GrKsbVE5f6zcALxWPRZ8WaUcENqMjHYKeVYp6nLeih5xHKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\youcode\\source\\repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj",
+  "projectFilePath": "C:\\Users\\youcode\\Source\\Repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\youcode\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512"
   ],

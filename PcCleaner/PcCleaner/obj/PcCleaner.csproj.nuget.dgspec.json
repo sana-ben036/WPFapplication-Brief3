@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\youcode\\source\\repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj": {}
+    "C:\\Users\\youcode\\Source\\Repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\youcode\\source\\repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj": {
+    "C:\\Users\\youcode\\Source\\Repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\youcode\\source\\repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj",
+        "projectUniqueName": "C:\\Users\\youcode\\Source\\Repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj",
         "projectName": "PcCleaner",
-        "projectPath": "C:\\Users\\youcode\\source\\repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj",
+        "projectPath": "C:\\Users\\youcode\\Source\\Repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\PcCleaner.csproj",
         "packagesPath": "C:\\Users\\youcode\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\youcode\\source\\repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\obj\\",
+        "outputPath": "C:\\Users\\youcode\\Source\\Repos\\sana-ben036\\WPFapplication-Brief3\\PcCleaner\\PcCleaner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\youcode\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -81,21 +81,23 @@ namespace UpdateApp
 
         }
 
-        private void Loadprogressbar()
+        private async Task Loadprogressbar()
         {
+
+
             Duration duré = new Duration(TimeSpan.FromSeconds(10));
             DoubleAnimation animation = new DoubleAnimation(200.0, duré);
             //pb1.BeginAnimation(ProgressBar.ValueProperty, animation);
             pb2.BeginAnimation(ProgressBar.ValueProperty, animation);
 
-
+            await Task.Delay(5000);
 
         }
 
         private void Analys_Click(object sender, RoutedEventArgs e)
         {
 
-            Loadprogressbar();
+            //Loadprogressbar();
             Scanner();
 
         }
@@ -117,28 +119,29 @@ namespace UpdateApp
 
         
 
-        private void GetVersion_Click(object sender, RoutedEventArgs e)
+        private async void GetVersion_Click(object sender, RoutedEventArgs e)
         {
 
-            Loadprogressbar();
+            
             pb2.Visibility = Visibility.Visible;
             GetVersion.Visibility = Visibility.Hidden;
             NoGetVersion.Visibility = Visibility.Hidden;
             
-            
+
+
             WebClient webClient = new WebClient();
 
             try
             {
 
 
-                //System.Threading.Thread.Sleep(5000);
+                await Loadprogressbar();
                 webClient.DownloadFile("https://sendeyo.com/up/d/0598c98a7f", @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip");
                 string zipPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\netcoreapp3.1\UPDATE.zip";
                 string extractPath = @"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release";
                 ZipFile.ExtractToDirectory(zipPath, extractPath);
                 File.Delete(zipPath);
-
+                
                 Process.Start(@"C:\Users\youcode\source\repos\sana-ben036\WPFapplication-Brief3\PcCleaner\PcCleaner\bin\Release\PcCleaner.exe");
                 this.Close();
 
